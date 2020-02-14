@@ -1,0 +1,36 @@
+CREATE TABLE `spring-security`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(255) NULL,
+  `enabled` INT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC));
+
+CREATE TABLE `spring-security`.`role` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `spring-security`.`users_roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `user` INT NULL,
+  `role` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `_idx` (`user` ASC),
+  INDEX `dfdf_idx` (`role` ASC),
+  CONSTRAINT `user`
+    FOREIGN KEY (`user`)
+    REFERENCES `spring-security`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `role`
+    FOREIGN KEY (`role`)
+    REFERENCES `spring-security`.`role` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+INSERT INTO `users` VALUES (1,'kai','{noop}123456',1),(2,'sena','{noop}123456',1);
+
+INSERT INTO `role` VALUES (1,'ROLE_ADMIN'),(2,'ROLE_USER');
+
+INSERT INTO `users_roles` VALUES (1,1,1),(2,1,2),(4,2,2);
