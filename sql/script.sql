@@ -1,6 +1,4 @@
-CREATE DATABASE SpringSecurity;
-
-CREATE TABLE `SpringSecurity`.`users` (
+CREATE TABLE `spring-security`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NULL,
   `password` VARCHAR(255) NULL,
