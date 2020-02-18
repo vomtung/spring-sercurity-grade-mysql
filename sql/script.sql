@@ -1,4 +1,6 @@
-CREATE TABLE `spring-security`.`users` (
+CREATE DATABASE SpringSecurity;
+
+CREATE TABLE `SpringSecurity`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NULL,
   `password` VARCHAR(255) NULL,
@@ -6,12 +8,12 @@ CREATE TABLE `spring-security`.`users` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `username_UNIQUE` (`username` ASC));
 
-CREATE TABLE `spring-security`.`role` (
+CREATE TABLE `SpringSecurity`.`role` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
 
-CREATE TABLE `spring-security`.`users_roles` (
+CREATE TABLE `SpringSecurity`.`users_roles` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user` INT NULL,
   `role` INT NULL,
@@ -20,16 +22,16 @@ CREATE TABLE `spring-security`.`users_roles` (
   INDEX `dfdf_idx` (`role` ASC),
   CONSTRAINT `user`
     FOREIGN KEY (`user`)
-    REFERENCES `spring-security`.`users` (`id`)
+    REFERENCES `SpringSecurity`.`users` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `role`
     FOREIGN KEY (`role`)
-    REFERENCES `spring-security`.`role` (`id`)
+    REFERENCES `SpringSecurity`.`role` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
-INSERT INTO `users` VALUES (1,'kai','{noop}123456',1),(2,'sena','{noop}123456',1);
+INSERT INTO `users` VALUES (1,'kai','123456',1),(2,'sena','123456',1);
 
 INSERT INTO `role` VALUES (1,'ROLE_ADMIN'),(2,'ROLE_USER');
 
