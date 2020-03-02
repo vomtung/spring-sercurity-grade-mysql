@@ -4,7 +4,7 @@
     <title>login</title>
 </head>
 <body>
-<h1>Spring MVC-Security Login Form</h1>
+<h1>Security Login 4 Form</h1>
 <h2>${message}</h2>
 <form name='loginForm' action="<c:url value='j_spring_security_login' />" method='POST'>
     <table>

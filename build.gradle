@@ -14,13 +14,13 @@ repositories {
 
 dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
-    compile 'org.springframework:spring-context:4.1.4.RELEASE'
-    compile 'org.springframework:spring-webmvc:4.1.4.RELEASE'
-    compile 'org.springframework:spring-core:4.1.4.RELEASE'
-    compile group: 'org.springframework', name: 'spring-tx', version: '4.1.4.RELEASE'
-    compile 'org.springframework:spring-web:4.1.4.RELEASE'
-    compile 'org.springframework.security:spring-security-config:4.1.4.RELEASE'
-    compile 'org.springframework.security:spring-security-web:4.1.4.RELEASE'
-    compile 'org.springframework:spring-orm:4.1.4.RELEASE'
+    compile 'org.springframework:spring-context:4.2.14.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.3.26.RELEASE'
+    compile 'org.springframework:spring-core:4.2.14.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version: '4.3.26.RELEASE'
+    compile 'org.springframework:spring-web:4.2.14.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.2.14.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.2.14.RELEASE'
+    compile 'org.springframework:spring-orm:4.3.26.RELEASE'
     compile 'javax.activation:activation:1.1'
 }
