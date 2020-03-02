@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class BaseController {
-    @RequestMapping(value = { "/login", "/" })
+    @RequestMapping(value = { "/login"})
     public String login(@RequestParam(value = "error", required = false) final String error, final Model model) {
         if (error != null) {
             model.addAttribute("message", "Login Failed!");
