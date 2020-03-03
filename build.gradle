@@ -3,7 +3,7 @@ plugins {
     id 'war'
 }
 
-group 'spring-sercurity-gradle-mysql'
+group 'spring-sercurity4-gradle-mysql'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
